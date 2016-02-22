@@ -1,4 +1,4 @@
 .DS_Store
-logs/
+logs/*
 !logs/log-sample.csv
 config.php
