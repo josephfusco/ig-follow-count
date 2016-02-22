@@ -8,13 +8,13 @@ A simple Instagram analytics tool that continuously logs and graphs your followe
 
 Clone project into the public root of your web server.
 
-```
+```sh
 git clone https://github.com/josephfusco/ig-follow-count
 ```
 
 Copy `config-sample.php` to `config.php` in the project root and fill in the values.
 
-```
+```php
 /** Instagram user ID */
 define( 'IG_USER_ID', '' );
 
@@ -24,13 +24,13 @@ define( 'IG_ACCESS_TOKEN', '' );
 
 SSH into server and Set the cron job.
 
-```
+```sh
 crontab -e
 ```
 
 In this example we are running `cron.php` every minute. Add the following to the file and save. (replace 'yourwebsite.com' with your domain)
 
-```
+```sh
 */1 * * * * wget -O /dev/null http://yourwebsite.com/cron.php
 ```
 
