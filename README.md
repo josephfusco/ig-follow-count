@@ -24,7 +24,7 @@ define( 'IG_USER_ID', '' );
 define( 'IG_ACCESS_TOKEN', '' );
 ```
 
-SSH into server and Set the cron job.
+SSH into server and set the cron job.
 
 ```sh
 crontab -e
