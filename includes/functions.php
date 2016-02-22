@@ -6,7 +6,7 @@ $api_url = "https://api.instagram.com/v1/users/". IG_USER_ID . "/?access_token="
 $api_response = file_get_contents( $api_url );
 
 function get_current_time() {
-    if( defined( TIME_ZONE ){
+    if( defined( 'TIME_ZONE' ){
         date_default_timezone_set( TIME_ZONE );
     }
     return date( 'm/d/Y h:i:s a', time() );
