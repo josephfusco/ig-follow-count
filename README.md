@@ -52,4 +52,4 @@ Sample data will keep being displayed until `cron.php` is first ran. Once ran it
 
 ## Creators
 
-**[Joseph Fusco](https://github.com/josephfusco)** & **[James Pistell](https://github.com/pistell)**
+[Joseph Fusco](https://github.com/josephfusco) & [James Pistell](https://github.com/pistell)
