@@ -4,6 +4,8 @@
 
 A simple Instagram analytics tool that continuously logs and graphs your follower count.
 
+![screenshot of follower graph](https://cloud.githubusercontent.com/assets/6676674/13220190/ca183a80-d942-11e5-82e8-673bdb7b6604.png)
+
 ## Setup
 
 Clone project into the public root of your web server.
