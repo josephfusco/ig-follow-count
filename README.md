@@ -8,32 +8,38 @@ A simple Instagram analytics tool that continuously logs and graphs your followe
 
 ## Setup
 
-Clone project into the public root of your web server.
+SSH into server, `cd` to the public root and clone project.
 
 ```sh
-git clone https://github.com/josephfusco/ig-follow-count
+git clone https://github.com/josephfusco/ig-follow-count .
 ```
 
 Copy `config-sample.php` to `config.php` in the project root and fill in the values.
 
-```php
-/** Instagram user ID */
-define( 'IG_USER_ID', '' );
-
-/** Instagram access token */
-define( 'IG_ACCESS_TOKEN', '' );
+```sh
+cp config-sample.php config.php && nano config.php
 ```
 
-SSH into server and set the cron job.
+Replace the text within the brackets along with the brackets with the proper values. To learn more about how to attain these values visit [https://www.instagram.com/developer/authentication/](https://www.instagram.com/developer/authentication/).
+
+```php
+/** Instagram user ID */
+define( 'IG_USER_ID', '{your user id here}' );
+
+/** Instagram access token */
+define( 'IG_ACCESS_TOKEN', '{your access token here}' );
+```
+
+After saving the newly made `config.php`, we just need to set the cron job.
 
 ```sh
 crontab -e
 ```
 
-In this example we are running `cron.php` every minute. Add the following to the file and save. (replace 'yourwebsite.com' with your domain)
+In this example we are running `cron.php` every minute which is located in the project root. Add the following to the file and save. (replace '{yourwebsite.com}' with your domain)
 
 ```sh
-*/1 * * * * wget -O /dev/null http://yourwebsite.com/cron.php
+*/1 * * * * wget -O /dev/null http://{yourwebsite.com}/cron.php
 ```
 
 Upon saving the file it should confirm with the following message: `crontab: installing new crontab`.
