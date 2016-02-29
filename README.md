@@ -50,7 +50,7 @@ Sample data will keep being displayed until `cron.php` is first ran. Once ran it
 
 `Time,Grams,Followers,Following`
 
-*'Grams' represents the number of photos on your account at the time
+\* _Grams_ represents the number of photos on your account at the time
 
 ## Creators
 
