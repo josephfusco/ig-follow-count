@@ -1,5 +1,5 @@
 # IG Follow Count
-dadsadsads
+
 [![License](https://img.shields.io/badge/license-GPL--2.0%2B-green.svg)](http://www.gnu.org/licenses/gpl-2.0.html)
 
 A simple Instagram analytics tool that continuously logs and graphs your follower count.
