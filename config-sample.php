@@ -23,3 +23,6 @@ define( 'IG_ACCESS_TOKEN', '' );
 
 /** Instagram hashtag */
 //define( 'IG_HASGTAG', '' );
+
+/** Set the graph color scheme */
+//define( 'THEME', 'dark' );

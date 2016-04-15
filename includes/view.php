@@ -12,7 +12,7 @@ if( count( get_included_files() ) == 1 ) exit( "Direct access not permitted." );
     <meta name="robots" content="noarchive">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/app.css">
+    <?php load_theme_styles(); ?>
 </head>
 <body>
 

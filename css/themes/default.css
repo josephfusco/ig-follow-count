@@ -1,0 +1,5 @@
+/*!
+ *
+ * Default Theme
+ *
+ */*,*:before,*:after{box-sizing:border-box}html,body{margin:0;padding:15px;height:100%}#plotlyA{height:90%;width:100%}footer{padding:2.5% 0;text-align:right}.credit,.account{display:inline-block;vertical-align:middle;color:#1f77b4;margin-left:25px;margin-right:25px;font-family:'Open Sans', Helvetica, sans-serif;font-size:14px}a{font-family:inherit;color:#1f77b4;text-decoration:none;transition:all .3s ease;padding:4px 10px;margin-left:5px;margin-right:5px;border-radius:3px}a:hover,a:focus{color:#1f77b4}.btn{border:1px solid;color:#1f77b4;text-decoration:none;font-family:'Open Sans', Helvetica, sans-serif;display:inline-block;vertical-align:middle;border-radius:3px;padding:10px 30px;background-color:transparent;transition:all .3s ease}.gtitle{fill:#1f77b4 !important}.js-line{stroke:#1f77b4 !important}.xtick text,.ytick text{fill:#1f77b4 !important}.js-plotly-plot .plotly .modebar-btn path,.js-plotly-plot .plotly .modebar-btn.modebar-btn--logo path{fill:#1f77b4 !important}::-moz-selection{color:#103d5d;background:#1f77b4}::selection{color:#103d5d;background:#1f77b4}

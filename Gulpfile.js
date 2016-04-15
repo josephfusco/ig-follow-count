@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 gulp.task('styles', function () {
 	gulp.src('css/**/*.scss')
 		.pipe(sass({outputStyle: 'compressed'}))
-        .pipe(gulp.dest('css'));
+        .pipe(gulp.dest('css/themes'));
 });
 
 gulp.task('watch', function() {
