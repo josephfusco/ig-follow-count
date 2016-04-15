@@ -40,13 +40,13 @@
       function ajax() {
         // First Ajax, Gets the profile pic, the user id #, and the username
         var username = document.getElementById("username").value;
-        var usernameToken = "&access_token=2806374073.1677ed0.c9383b1f609d4c0990adad916ba0502d";
+        var usernameToken = "access_token=" //Add your access token here;
         $.ajax({
           type: "GET",
           dataType: "jsonp",
           username: username,
           cache: false,
-          url: "https://api.instagram.com/v1/users/search?q=" + username + usernameToken,
+          url: "https://api.instagram.com/v1/users/search?q=" + username + "&" + usernameToken,
           success: function(data) {
             for (var i = 0; i < data.data.length; i++) {
               if (this.username == data.data[i].username) {
@@ -63,7 +63,7 @@
                 $.ajax({
                   type: "GET",
                   dataType: "jsonp",
-                  url: "https://api.instagram.com/v1/users/" + data.data[i].id + "/media/recent/?access_token=2806374073.1677ed0.c9383b1f609d4c0990adad916ba0502d",
+                  url: "https://api.instagram.com/v1/users/" + data.data[i].id + "/media/recent/?" + usernameToken,
                   success: function(data) {
                     var tr;
                     for (var i = 0; i < 9; i++) {
@@ -79,7 +79,7 @@
                 $.ajax({
                   type: "GET",
                   dataType: "jsonp",
-                  url: "https://api.instagram.com/v1/users/" + data.data[i].id + "/?access_token=2806374073.1677ed0.c9383b1f609d4c0990adad916ba0502d",
+                  url: "https://api.instagram.com/v1/users/" + data.data[i].id + "/?" + usernameToken,
                   success: function(data) {
                     //Add the # of followers
                     var followers = "# of Followers: " + data.data.counts.followed_by + "<br />";
