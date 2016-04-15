@@ -22,6 +22,7 @@ if( count( get_included_files() ) == 1 ) exit( "Direct access not permitted." );
 
     <footer>
         <div class="account">
+            <a href="/recent.php">Recent</a>
         <?php if( defined( 'IG_HASGTAG' ) ){ ?>
             <a href="https://www.instagram.com/explore/tags/<?php echo IG_HASGTAG; ?>/" target="_blank">#<?php echo IG_HASGTAG; ?></a>
         <?php } ?>
