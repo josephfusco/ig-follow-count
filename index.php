@@ -7,4 +7,4 @@
 define( 'ABSPATH', dirname(__FILE__) . '/' );
 
 require_once( ABSPATH . 'setup.php' );
-require_once( ABSPATH . 'includes/view.php' );
+require_once( ABSPATH . 'includes/home.php' );
