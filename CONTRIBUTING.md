@@ -1,8 +1,6 @@
 # Contributing to IG Follow Count
 
-Thank you for taking the time to contribute! :+1::tada:
-
-All contributions/suggestions will be consindered.
+Thank you for taking the time to contribute! :+1::tada: All contributions/suggestions will be consindered.
 
 ## Development
 
