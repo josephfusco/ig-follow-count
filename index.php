@@ -12,17 +12,53 @@ get_header();
     <!-- plotly chart renders here -->
 </div>
 
-<footer>
-    <div class="account">
-        <a href="/recent.php">Recent</a>
-    <?php if( defined( 'IG_HASGTAG' ) ){ ?>
-        <a href="https://www.instagram.com/explore/tags/<?php echo IG_HASGTAG; ?>/" target="_blank">#<?php echo IG_HASGTAG; ?></a>
-    <?php } ?>
-        <a href="https://www.instagram.com/<?php echo get_data( 'username' ); ?>/" target="_blank">@<?php echo get_data( 'username' ); ?></a>
-    </div>
-    <a class="btn" href="logs/log.csv" download>Download CSV</a>
-</footer>
+<script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script>
+    <?php
 
-<?php get_plotly(); ?>
+        $log_file = 'logs/log.csv';
+        $log_sample_file = 'logs/log-sample.csv';
+        if( file_exists( $log_file ) ) {
+            $file = $log_file;
+        } else {
+            $file = $log_sample_file;
+        }
+
+    ?>
+    function makeplotA() {
+        Plotly.d3.csv("<?php echo $file; ?>", function (data) {
+            processData(data)
+        });
+    };
+
+    function processData(allRows) {
+
+        var x = [],
+            y = [],
+            standard_deviation = [];
+
+        for (var i = 0; i < allRows.length; i++) {
+            row = allRows[i];
+            x.push(row['Time']);
+            y.push(row['Followers']);
+        }
+        makePlotly(x, y, standard_deviation);
+    }
+
+    function makePlotly(x, y, standard_deviation) {
+        var plotDiv = document.getElementById("plot");
+        var traces = [{
+            x: x,
+            y: y
+        }];
+
+        Plotly.newPlot('plotlyA', traces, {
+            title: 'IG Follow Count'
+        });
+    };
+
+    makeplotA();
+
+</script>
 
 <?php get_footer(); ?>

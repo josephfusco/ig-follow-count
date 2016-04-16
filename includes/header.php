@@ -15,9 +15,19 @@ if ( ! defined( 'ABSPATH' ) ) exit ( "Direct access not permitted." );
 
      <?php load_theme_styles(); ?>
 
+     <script type="text/javascript" src="js/jquery.min.js"></script>
+
 </head>
 <body>
 
     <nav>
-        
+        <div class="account">
+            <a href="/recent.php">Recent</a>
+        <?php if( defined( 'IG_HASGTAG' ) ){ ?>
+            <a href="https://www.instagram.com/explore/tags/<?php echo IG_HASGTAG; ?>/" target="_blank">#<?php echo IG_HASGTAG; ?></a>
+        <?php } ?>
+            <a href="https://www.instagram.com/<?php echo get_data( 'username' ); ?>/" target="_blank">@<?php echo get_data( 'username' ); ?></a>
+        </div>
+
+        <a class="btn" href="logs/log.csv" download>Download CSV</a>
     </nav>

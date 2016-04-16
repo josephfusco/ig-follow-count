@@ -56,57 +56,6 @@ function write_data( $file ) {
     fclose( $fh );
 }
 
-function get_plotly() {
-    // Show sample csv if nothing has been logged yet
-    $log_file = 'logs/log.csv';
-    $log_sample_file = 'logs/log-sample.csv';
-    if( file_exists( $log_file ) ) {
-        $file = $log_file;
-    } else {
-        $file = $log_sample_file;
-    }
-    ?>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script>
-
-        function makeplotA() {
-            Plotly.d3.csv("<?php echo $file; ?>", function (data) {
-                processData(data)
-            });
-        };
-
-        function processData(allRows) {
-
-            var x = [],
-                y = [],
-                standard_deviation = [];
-
-            for (var i = 0; i < allRows.length; i++) {
-                row = allRows[i];
-                x.push(row['Time']);
-                y.push(row['Followers']);
-            }
-            makePlotly(x, y, standard_deviation);
-        }
-
-        function makePlotly(x, y, standard_deviation) {
-            var plotDiv = document.getElementById("plot");
-            var traces = [{
-                x: x,
-                y: y
-            }];
-
-            Plotly.newPlot('plotlyA', traces, {
-                title: 'IG Follow Count'
-            });
-        };
-
-        makeplotA();
-
-    </script>
-<?php
-}
-
 function load_theme_styles() {
     if ( !defined( 'THEME' ) ){
         echo '<link href="css/themes/default.css" rel="stylesheet" type="text/css">';
