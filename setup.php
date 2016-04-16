@@ -1,11 +1,7 @@
 <?php
-/**
- *
- * Checks for config.php and makes sure IG constants are defined
- * Loads functions.php
- *
- */
-if( count( get_included_files() ) == 1 ) exit( "Direct access not permitted." );
+
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) exit ( "Direct access not permitted." );
 
 if ( file_exists( ABSPATH . 'config.php' ) ) {
 	require_once( ABSPATH . 'config.php' );

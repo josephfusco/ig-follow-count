@@ -1,9 +1,18 @@
 <?php
 
-if( count( get_included_files() ) == 1 ) exit( "Direct access not permitted." );
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) exit ( "Direct access not permitted." );
 
 $api_url = "https://api.instagram.com/v1/users/". IG_USER_ID . "/?access_token=" . IG_ACCESS_TOKEN;
 $api_response = file_get_contents( $api_url );
+
+function get_header() {
+    require_once( ABSPATH . 'includes/header.php' );
+}
+
+function get_footer() {
+    require_once( ABSPATH . 'includes/footer.php' );
+}
 
 function get_current_time() {
     if( defined( 'TIME_ZONE' ) ) {

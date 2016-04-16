@@ -1,5 +1,8 @@
 <?php
 
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) exit ( "Direct access not permitted." );
+
 /**
  * The base configuration for IG Follow Count
  *
