@@ -5,7 +5,6 @@
 } @else {
     $opacity: 1;
 }
-
 *,
 *:before,
 *:after {
@@ -17,14 +16,21 @@ body {
     padding: 15px;
     height: 100%;
 }
+::-moz-selection {
+    @if variable-exists(color--primary){
+        color: darken($color--primary, 20%);
+        background: $color--primary;
+    }
+}
+::selection {
+    @if variable-exists(color--primary){
+        color: darken($color--primary, 20%);
+        background: $color--primary;
+    }
+}
 #plotlyA {
     height: 90%;
     width: 100%;
-}
-
-footer {
-    padding: 2.5% 0;
-    text-align: right;
 }
 .credit,
 .account {
@@ -82,7 +88,6 @@ a:focus {
         opacity: 1;
     }
 }
-
 body {
     @if variable-exists(color--background){
         background-color: $color--background;
@@ -128,17 +133,5 @@ svg.main-svg:first-of-type,
 .js-plotly-plot .plotly .modebar-btn.modebar-btn--logo path {
     @if variable-exists(color--primary){
         fill: $color--primary !important;
-    }
-}
-::-moz-selection {
-    @if variable-exists(color--primary){
-        color: darken($color--primary, 20%);
-        background: $color--primary;
-    }
-}
-::selection {
-    @if variable-exists(color--primary){
-        color: darken($color--primary, 20%);
-        background: $color--primary;
     }
 }
