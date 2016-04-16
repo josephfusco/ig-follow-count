@@ -2,7 +2,7 @@
 
 define( 'ABSPATH', dirname(__FILE__) . '/' );
 
-require_once( ABSPATH . 'setup.php' );
+require_once( ABSPATH . 'startup.php' );
 
 get_header();
 

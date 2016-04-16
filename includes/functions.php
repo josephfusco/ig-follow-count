@@ -58,8 +58,8 @@ function write_data( $file ) {
 
 function load_theme_styles() {
     if ( !defined( 'THEME' ) ){
-        echo '<link href="css/themes/default.css" rel="stylesheet" type="text/css">';
+        echo '<link href="styles/themes/default.css" rel="stylesheet" type="text/css">';
     } else {
-        echo '<link href="css/themes/' . THEME . '.css" rel="stylesheet" type="text/css">';
+        echo '<link href="styles/themes/' . THEME . '.css" rel="stylesheet" type="text/css">';
     }
 }
