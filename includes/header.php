@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) exit ( "Direct access not permitted." );
 </head>
 <body>
 
-    <nav>
+    <nav class="navbar">
         <div class="account">
             <a href="/recent.php">Recent</a>
         <?php if( defined( 'IG_HASGTAG' ) ){ ?>

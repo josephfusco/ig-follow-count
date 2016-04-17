@@ -3,7 +3,7 @@ var gulp = require('gulp'),
 	watch = require('gulp-watch');
 
 gulp.task('styles', function () {
-	gulp.src('css/**/*.scss')
+	gulp.src('styles/**/*.scss')
 		.pipe(sass({outputStyle: 'compressed'}))
         .pipe(gulp.dest('styles/themes'));
 });

@@ -40,9 +40,7 @@ get_header();
             y: y
         }];
 
-        Plotly.newPlot('plotlyA', traces, {
-            title: 'IG Follow Count'
-        });
+        Plotly.newPlot('plotlyA', traces );
     };
 
     makeplotA();

@@ -15,14 +15,20 @@
 }
 html,
 body {
-    margin: 0;
-    padding: 15px;
     height: 100%;
 }
 body {
     @if variable-exists(color--background){
         background-color: $color--background;
     }
+}
+.navbar {
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
 }
 ::-moz-selection {
     @if variable-exists(color--primary){
