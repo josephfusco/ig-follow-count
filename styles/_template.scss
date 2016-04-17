@@ -1,10 +1,13 @@
 /* Layout */
 
-@if variable-exists(opacity--footer) {
-    $opacity: $opacity--footer;
+@import "normalize";
+
+@if variable-exists(opacity--initial) {
+    $opacity: $opacity--initial;
 } @else {
     $opacity: 1;
 }
+
 *,
 *:before,
 *:after {
@@ -15,6 +18,11 @@ body {
     margin: 0;
     padding: 15px;
     height: 100%;
+}
+body {
+    @if variable-exists(color--background){
+        background-color: $color--background;
+    }
 }
 ::-moz-selection {
     @if variable-exists(color--primary){
@@ -86,11 +94,6 @@ a:focus {
 .btn:focus {
     @if variable-exists(opacity--footer){
         opacity: 1;
-    }
-}
-body {
-    @if variable-exists(color--background){
-        background-color: $color--background;
     }
 }
 svg.main-svg:first-of-type,
