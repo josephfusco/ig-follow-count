@@ -29,5 +29,5 @@ if ( ! defined( 'ABSPATH' ) ) exit ( "Direct access not permitted." );
             <a href="https://www.instagram.com/<?php echo get_data( 'username' ); ?>/" target="_blank">@<?php echo get_data( 'username' ); ?></a>
         </div>
 
-        <a class="btn" href="logs/log.csv" download>Download CSV</a>
+        <a class="btn" href="<?php echo get_log_file(); ?>" download>Download CSV</a>
     </nav>

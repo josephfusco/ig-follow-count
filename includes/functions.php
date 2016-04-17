@@ -63,3 +63,12 @@ function load_theme_styles() {
         echo '<link href="styles/themes/' . THEME . '.css" rel="stylesheet" type="text/css">';
     }
 }
+
+function get_log_file() {
+    $log_file = 'logs/log.csv';
+    $log_file_sample = 'logs/log-sample.csv';
+    if( !file_exists( $log_file ) ) {
+        return $log_file_sample;
+    }
+    return $log_file;
+}

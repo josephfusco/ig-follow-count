@@ -12,19 +12,9 @@ get_header();
 
 <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script>
-    <?php
 
-        $log_file = 'logs/log.csv';
-        $log_sample_file = 'logs/log-sample.csv';
-        if( file_exists( $log_file ) ) {
-            $file = $log_file;
-        } else {
-            $file = $log_sample_file;
-        }
-
-    ?>
     function makeplotA() {
-        Plotly.d3.csv("<?php echo $file; ?>", function (data) {
+        Plotly.d3.csv("<?php echo get_log_file(); ?>", function (data) {
             processData(data)
         });
     };
