@@ -1,7 +1,5 @@
 <?php
 
-define( 'ABSPATH', dirname(__FILE__) . '/' );
-
-require_once( ABSPATH . 'startup.php' );
+require_once( 'startup.php' );
 
 write_data( 'logs/log.csv' );
