@@ -11,12 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) exit ( "Direct access not permitted." );
      <title>IG Follow Count</title>
      <meta name="robots" content="noarchive">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
      <link rel="icon" type="image/png" sizes="150x150" href="<?php echo get_data( 'profile_picture' ); ?>">
      <link rel="apple-touch-icon" sizes="150x150" href="<?php echo get_data( 'profile_picture' ); ?>">
-
      <?php load_theme_styles(); ?>
 
      <script type="text/javascript" src="js/jquery.min.js"></script>
+     <script type="text/javascript" src="js/jquery.number.min.js"></script>
 
 </head>
 <body class="<?php echo get_active_page(); ?>">
