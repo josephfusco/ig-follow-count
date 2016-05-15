@@ -1,10 +1,4 @@
 (function($) {
-$('body').addClass('menu--open');
-    $(".btn-toggle-menu, #side-menu").on("mouseenter", function() {
-        $('body').addClass('menu--open')
-    }).on("mouseleave", function() {
-        $('body').removeClass('menu--open')
-    });
 
     function getParameterByName(name) {
         name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");

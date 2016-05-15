@@ -36,68 +36,43 @@ body {
     width: 100%;
     height: 48px;
     z-index: 1002; // plotly 1001 + 1
-    padding: 6px 15px;
     text-align: right;
+
+    ul.nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            &.active a {
+                background-color: $color--primary;
+                color: $color--background;
+                box-shadow: 0 1px 0 0 $color--primary;
+            }
+
+            a {
+                padding: 15px;
+                display: block;
+            }
+        }
+    }
 }
-.logo {
+.account-meta {
     float: left;
+    padding: 0px 15px;
     img {
         border-radius: 50%;
-        max-width: 28px;
+        max-width: 38px;
+        margin: 5px 5px 5px 0;
+        display: inline-block;
+        vertical-align: middle;
         height: auto;
     }
-}
-#side-menu {
-    position: fixed;
-    z-index: 1003; // plotly 1001 + 2
-    top: 0;
-    right: 0;
-    bottom: 0;
-    right: -280px;
-    height: 100%;
-    width: 280px;
-    max-width: 100%;
-    text-align: center;
-    @if variable-exists(color--background){
-        background-color: $color--background;
-    }
-    @if variable-exists(color--primary){
-        box-shadow: -1px 0 0 rgba($color--primary,.3);
-    }
-    transition: opacity .2s ease, transform .1s linear;
-    visibility: hidden;
-    opacity: 0;
-
-    body.menu--open & {
-        visibility: visible;
-        opacity: 1;
-        transform: translateX(-280px);
-    }
-
     a {
-        display: block;
-        padding: 9px 0;
-    }
-
-    .btn {
-        max-width: 200px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 40px;
-    }
-}
-.btn-toggle-menu {
-    cursor: pointer;
-    background-color: inherit;
-    border: 0;
-    padding: 6px 15px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    transition: transform .1s linear;
-    @if variable-exists(color--primary){
-        color: $color--primary;
+        display: inline-block;
+        vertical-align: middle;
     }
 }
 main.content {
@@ -134,13 +109,9 @@ a {
     }
     text-decoration: none;
     transition: all .3s ease;
-    padding: 4px 10px;
-    margin-left: 5px;
-    margin-right: 5px;
     @if variable-exists(color--btn-background){
         background-color: $color--btn-background;
     }
-    border-radius: 3px;
 }
 a:hover,
 a:focus {

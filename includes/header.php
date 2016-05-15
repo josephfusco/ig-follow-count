@@ -19,34 +19,20 @@ if ( ! defined( 'ABSPATH' ) ) exit ( "Direct access not permitted." );
      <script type="text/javascript" src="js/jquery.min.js"></script>
 
 </head>
-<body>
+<body class="<?php echo get_active_page(); ?>">
 
     <nav class="navbar">
 
-        <a href="/" class="logo">
+        <div class="account-meta">
             <img src="<?php echo get_data( 'profile_picture' ); ?>" alt="<?php echo get_data( 'username' ); ?>">
-        </a>
+            <a href="https://www.instagram.com/<?php echo get_data( 'username' ); ?>/" target="_blank"><?php echo get_data( 'full_name' ); ?></a>
+        </div>
 
-        <button type="button" class="btn-toggle-menu">☰</button>
+        <ul class="nav">
+            <li class="<?= (get_active_page() == 'dashboard') ? 'active':''; ?>"><a href="/">Dashboard</a></li>
+            <li class="<?= (get_active_page() == 'recent') ? 'active':''; ?>"><a href="/recent.php">Recent</a></li>
+        </ul>
 
     </nav>
-
-    <div id="side-menu">
-
-        <div class="menu-header">
-            <h1>Menu</h1>
-        </div>
-
-        <div class="account">
-            <a href="/recent.php">Recent</a>
-        <?php if( defined( 'IG_HASGTAG' ) ){ ?>
-            <a href="https://www.instagram.com/explore/tags/<?php echo IG_HASGTAG; ?>/" target="_blank">#<?php echo IG_HASGTAG; ?></a>
-        <?php } ?>
-            <a href="https://www.instagram.com/<?php echo get_data( 'username' ); ?>/" target="_blank">@<?php echo get_data( 'username' ); ?></a>
-        </div>
-
-        <a class="btn" href="<?php echo get_log_file(); ?>" download>Download CSV</a>
-
-    </div>
 
     <main class="content">

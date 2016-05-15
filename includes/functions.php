@@ -89,7 +89,7 @@ function write_data( $file ) {
 			get_count( 'follows' )
 		);
 	}
-	
+
 	$fh = fopen( $file, 'a' );
 	fputcsv( $fh, $data );
 	fclose( $fh );
@@ -120,4 +120,18 @@ function get_log_file() {
 	}
 
 	return $log_file;
+}
+
+/**
+ * Get the current pagename
+ *
+ * @return string
+ */
+function get_active_page() {
+    // Dynamically set current page title as body class to target pages with CSS
+    $basename = basename( $_SERVER['PHP_SELF'], ".php" );
+    if ( $basename == 'index') {
+        $basename = 'dashboard';
+    }
+    return $basename;
 }
