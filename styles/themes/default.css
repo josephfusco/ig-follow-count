@@ -226,3 +226,7 @@ a:hover, a:focus {
 .js-plotly-plot .plotly .modebar-btn path, .js-plotly-plot .plotly .modebar-btn.modebar-btn--logo path {
   fill: #1f77b4 !important
 }
+
+.progress-bar.animate {
+   width: 100%;
+}

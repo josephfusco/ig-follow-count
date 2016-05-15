@@ -16,6 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) exit ( "Direct access not permitted." );
      <?php load_theme_styles(); ?>
 
      <script type="text/javascript" src="js/jquery.min.js"></script>
+     <script type="text/javascript" src="js/jquery.number.min.js"></script>
 
 </head>
 <body>
