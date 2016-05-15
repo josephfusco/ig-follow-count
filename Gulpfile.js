@@ -3,13 +3,14 @@ var gulp = require('gulp'),
 	watch = require('gulp-watch');
 
 gulp.task('styles', function () {
-	gulp.src('styles/**/*.scss')
+	gulp.src('css/**/*.scss')
+		.pipe(sass().on('error', sass.logError))
 		.pipe(sass({outputStyle: 'compressed'}))
-        .pipe(gulp.dest('styles/themes'));
+        .pipe(gulp.dest('css/themes'));
 });
 
 gulp.task('watch', function() {
-	gulp.watch('styles/**/*.scss', ['styles']);
+	gulp.watch('css/**/*.scss', ['styles']);
 });
 
 gulp.task('default', ['styles', 'watch']);

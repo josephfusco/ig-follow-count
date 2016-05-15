@@ -1,8 +1,4 @@
 <?php
-
-// Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) exit ( "Direct access not permitted." );
-
 /**
  * The base configuration for IG Follow Count
  *
@@ -12,6 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) exit ( "Direct access not permitted." );
  * For more on Instagram authenication see:
  * https://www.instagram.com/developer/authentication/
  */
+
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) exit ( "Direct access not permitted." );
 
 /** Instagram user ID */
 define( 'IG_USER_ID', '' );
