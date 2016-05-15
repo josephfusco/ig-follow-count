@@ -1,5 +1,7 @@
 (function($) {
 
-    console.log('hello');
+    $('.btn-toggle-menu').click( function() {
+        $('body').toggleClass('menu--open');
+    });
 
 })(jQuery);

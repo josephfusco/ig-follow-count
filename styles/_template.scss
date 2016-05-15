@@ -21,14 +21,57 @@ body {
     @if variable-exists(color--background){
         background-color: $color--background;
     }
+    transition: transform .2s ease;
 }
 .navbar {
-    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    @if variable-exists(color--primary){
+        box-shadow: 0 1px 0 rgba($color--primary,.3);;
+    }
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 1002; // plotly 1001 + 1
+    padding: 15px;
+    text-align: right;
+}
+.logo {
+    float: left;
+    img {
+        border-radius: 50%;
+        max-width: 28px;
+        height: auto;
+    }
+}
+#fullscreen-menu {
+    position: fixed;
     z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    background-color: #333;
+    transition: opacity .2s ease;
+    visibility: hidden;
+    opacity: 0;
+    body.menu--open & {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.btn-toggle-menu {
+    cursor: pointer;
+    background-color: inherit;
+    border: 0;
+    @if variable-exists(color--primary){
+        color: $color--primary;
+    }
+}
+main.content {
+    padding-top: 80px;
 }
 ::-moz-selection {
     @if variable-exists(color--primary){
