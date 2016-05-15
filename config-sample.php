@@ -19,7 +19,10 @@ define( 'IG_USER_ID', '' );
 define( 'IG_ACCESS_TOKEN', '' );
 
 /** Define server time zone for log */
-//define( 'TIME_ZONE', 'US/Eastern' );
+define( 'TIME_ZONE', 'US/Eastern' );
+
+/** Define Database Password  */
+define( 'DB_PASSWORD', '');
 
 /** Optional configurations below */
 

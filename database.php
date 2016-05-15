@@ -1,11 +1,13 @@
 <?php
 
+require_once( 'startup.php' );
+
 try {
   $db = new PDO("mysql:host=host-10;
                        dbname=9recent;
                        port=3306", //specify DB port if need be
                        "root", //db username
-                       ""); //DB password
+                       DB_PASSWORD); //DB password
   //var_dump($db); //Dump the database info
   $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION); //Shows errors if the PDO object returns errors such as cannot execute query
                                                                //in PHP the 2 colons "::" represent a relationship between the class name on the left and the property or method on the right
@@ -34,7 +36,7 @@ try{
 
 $servername = "host-10";
 $username = "root";
-$password = "";
+$password = DB_PASSWORD;
 $dbname = "9recent";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
