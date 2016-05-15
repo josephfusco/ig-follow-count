@@ -21,6 +21,9 @@ body {
     @if variable-exists(color--background){
         background-color: $color--background;
     }
+    @if variable-exists(color--primary){
+        color: $color--primary;
+    }
     transition: transform .2s ease;
 }
 .navbar {
