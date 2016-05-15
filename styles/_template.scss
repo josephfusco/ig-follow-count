@@ -58,6 +58,26 @@ body {
             }
         }
     }
+
+    summary {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-color: $color--background;
+        text-align: center;
+        padding-top: 15px;
+        width: 340px;
+        margin: 0 auto;
+        @if variable-exists(color--primary){
+            color: rgba($color--primary, $opacity);
+        }
+        span {
+            @if variable-exists(color--primary){
+                color: rgba($color--primary, 1);
+            }
+        }
+    }
 }
 .account-meta {
     float: left;

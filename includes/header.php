@@ -26,6 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) exit ( "Direct access not permitted." );
         <div class="account-meta">
             <img src="<?php echo get_data( 'profile_picture' ); ?>" alt="<?php echo get_data( 'username' ); ?>">
             <a href="https://www.instagram.com/<?php echo get_data( 'username' ); ?>/" target="_blank"><?php echo get_data( 'full_name' ); ?></a>
+            <summary><span><?php echo get_count( 'media' ); ?></span> posts <span><?php echo get_count( 'followed_by' ); ?></span> followers <span><?php echo get_count( 'follows' ); ?></span> following</summary>
         </div>
 
         <ul class="nav">
