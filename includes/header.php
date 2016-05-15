@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit ( "Direct access not permitted." );
      <meta name="robots" content="noarchive">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
      <meta name="viewport" content="width=device-width, initial-scale=1">
-
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
      <?php load_theme_styles(); ?>
 
      <script type="text/javascript" src="js/jquery.min.js"></script>
