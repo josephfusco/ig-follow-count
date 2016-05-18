@@ -7,7 +7,7 @@
  * the values.
  *
  * For more on Instagram authenication see:
- * https://www.instagram.com/developer/authentication/
+ * @link https://www.instagram.com/developer/authentication/
  */
 
 /** Instagram user ID */
@@ -20,9 +20,6 @@ define( 'IG_ACCESS_TOKEN', '' );
 //define( 'TIME_ZONE', 'US/Eastern' );
 
 /** Optional configurations below */
-
-/** Instagram hashtag */
-//define( 'IG_HASGTAG', '' );
 
 /** Set the graph color scheme */
 //define( 'THEME', 'dark' );
