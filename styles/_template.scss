@@ -1,12 +1,15 @@
-/* Layout */
+
+/* Config */
 
 @import "normalize";
 
+$opacity: 1;
+
 @if variable-exists(opacity--initial) {
     $opacity: $opacity--initial;
-} @else {
-    $opacity: 1;
 }
+
+/* Begin Styles */
 
 *,
 *:before,
