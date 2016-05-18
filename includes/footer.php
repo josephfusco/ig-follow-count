@@ -7,7 +7,12 @@ if ( ! defined( 'ABSPATH' ) ) exit ( "Direct access not permitted." );
 
 </main>
 
+<footer>
+    <a href="https://github.com/josephfusco/ig-follow-count" target="_blank">GitHub</a>
+</footer>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" charset="utf-8"></script>
+
 </body>
 </html>

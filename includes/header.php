@@ -17,8 +17,6 @@ if ( ! defined( 'ABSPATH' ) ) exit ( "Direct access not permitted." );
 
      <?php load_theme_styles(); ?>
 
-     <script type="text/javascript" src="js/jquery.min.js"></script>
-
 </head>
 <body class="<?php echo get_active_page(); ?>">
 
@@ -30,9 +28,11 @@ if ( ! defined( 'ABSPATH' ) ) exit ( "Direct access not permitted." );
             <summary><span><?php echo get_count( 'media' ); ?></span> posts <span><?php echo get_count( 'followed_by' ); ?></span> followers <span><?php echo get_count( 'follows' ); ?></span> following</summary>
         </div>
 
+        <!--
         <ul class="nav">
             <li class="<?= (get_active_page() == 'dashboard') ? 'active':''; ?>"><a href="/">Dashboard</a></li>
         </ul>
+        -->
 
     </nav>
 

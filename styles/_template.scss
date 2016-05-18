@@ -83,7 +83,16 @@ body {
                 color: rgba($color--primary, 1);
             }
         }
+        @media (max-width: 800px) {
+            display: none;
+        }
     }
+}
+footer {
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
 }
 .account-meta {
     float: left;
