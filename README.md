@@ -59,6 +59,14 @@ Sample data will keep being displayed until `cron.php` is first ran. Once ran it
 
 \* _Grams_ represents the number of photos on your account at the time
 
+## To Do
+
+- [X] Create simple theme template system.
+- [ ] Add pre-loader.
+- [ ] Create install script for easier setup.
+- [ ] Possibly break up log files into months or weeks for shorter graph load times.
+- [ ] Live update graph.
+
 ## Creators
 
 [Joseph Fusco](https://github.com/josephfusco) & [James Pistell](https://github.com/pistell)
