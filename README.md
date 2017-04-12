@@ -4,7 +4,7 @@ A simple Instagram analytics tool that continuously logs and graphs your followe
 
 ## Themes
 
-####Default
+#### Default
 ![default theme](https://cloud.githubusercontent.com/assets/6676674/14550091/cdf47d92-0293-11e6-9e67-c54a1736ef24.png)
 
 #### Dark
