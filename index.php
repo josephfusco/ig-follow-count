@@ -5,6 +5,7 @@ require_once( 'startup.php' );
 get_header();
 
 ?>
+<!-- Recheck the code there are erors!!!-->
 
 <div id="plotlyA">
     <!-- plotly chart renders here -->
